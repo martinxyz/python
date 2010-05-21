@@ -1,0 +1,10 @@
+Build:
+
+$ python setup.py build_ext -i
+
+Test:
+
+$ python
+>>> import hello
+>>> hello.distance(1, 1)
+1.4142135623730951
