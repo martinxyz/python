@@ -1,0 +1,5 @@
+*.so
+*.pyc
+*_wrap.*
+build
+hello.py
