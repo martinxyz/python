@@ -2,7 +2,7 @@ Build:
 
 $ python setup.py build_ext -i
 
-Test:
+Test (requires scipy):
 
-$ python
->>> import hello
+$ python demo.py
+
