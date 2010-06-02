@@ -5,6 +5,7 @@
 %}
 %include "hello.hpp"
 
+// needed if this module is imported before numpy
 %init %{
 import_array();
 %}
