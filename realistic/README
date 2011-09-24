@@ -2,7 +2,7 @@ Build:
 
 $ python setup.py build_ext -i
 
-Test (requires scipy):
+Test (requires matplotlib):
 
 $ python demo.py
 
