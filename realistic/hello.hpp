@@ -46,12 +46,14 @@ class Gradient {
 };
 
 
-void render(PyObject * dst_surface) {
+PyObject * render(PyObject * dst_surface) {
   PyObject * res;
   int x, y, w, h;
   // ...
   res = PyObject_CallMethod(dst_surface, "mark_dirty",
                             "(iiii)", x, y, w, h);
-  Py_DECREF(res); // note: crash if callback throws exception
+  if (!res) return NULL; // Python exception in mark_dirty(), just pass it on
+  Py_DECREF(res); // we own Python reference to res, release it
+  // ...
+  Py_RETURN_NONE; // return a new reference to None
 }
-
