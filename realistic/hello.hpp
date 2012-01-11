@@ -1,3 +1,5 @@
+// this file is parsed by SWIG (and compiled by gcc)
+
 class RingRenderer {
   public:
   int cx, cy;
