@@ -1,7 +1,3 @@
-# slightly advanced example:
-# - swig .i file separated from source
-# - using an external library (libpng)
-
 from distutils.core import setup, Extension
 from glob import glob
 from commands import getoutput
