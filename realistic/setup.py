@@ -1,6 +1,6 @@
 from distutils.core import setup, Extension
 from glob import glob
-from commands import getoutput
+from subprocess import check_output
 
 setup(ext_modules = [
         Extension("_hello",
@@ -10,7 +10,7 @@ setup(ext_modules = [
                   undef_macros = ["NDEBUG"], # make assert() work
 
                   # if we use some library:
-                  # extra_compile_args = getoutput('pkg-config libpng --cflags').split(),
-                  # extra_link_args = getoutput('pkg-config libpng --libs').split(),
+                  # extra_compile_args = check_output('pkg-config libpng --cflags', shell=True, universal_newlines=True).split(),
+                  # extra_link_args = check_output('pkg-config libpng --libs', shell=True, universal_newlines=True).split(),
                   )
         ])
